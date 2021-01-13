@@ -1,5 +1,4 @@
 import csv
-import os
 
 from django.utils.dateparse import parse_datetime
 from users.models import User

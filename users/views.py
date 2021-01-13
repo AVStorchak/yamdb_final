@@ -53,9 +53,9 @@ class UserCreate(APIView):
     def post(self, request):
         serializer = CreateUserSerializer(data=request.data)
         user = User.objects.get_or_create(
-                email=self.request.user.email,
-                username=self.request.user.email,
-                password='')
+            email=self.request.user.email,
+            username=self.request.user.email,
+            password='')
         user_email = user.email
         confirmation_code = default_token_generator.make_token(user)
         send_mail(

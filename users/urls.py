@@ -1,9 +1,7 @@
 from django.urls import path, include
 from users.views import MyTokenObtainPairView, UserCreate, UserViewSet
 from rest_framework.routers import DefaultRouter
-from rest_framework_simplejwt.views import (
-        TokenRefreshView,
-    )
+from rest_framework_simplejwt.views import TokenRefreshView
 
 router_v1 = DefaultRouter()
 router_v1.register(r'users', UserViewSet)
