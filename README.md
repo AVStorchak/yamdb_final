@@ -18,7 +18,7 @@ Nothing, as the project uses the Docker system.
 
 2. Open another terminal, run "docker-compose exec web /bin/bash" and then run "python manage.py migrate" to establish the DB. 
 
-3. In order to create the superuser, open another terminal and run "docker-compose exec web /bin/bash" (skip if such a terminal already is opened), then run "python manage.py createsuperuser" and follow the instructions. The administrator page is accessible at http://127.0.0.1:8000/admin/.
+3. In order to create the superuser, open another terminal and run "docker-compose exec web /bin/bash" (skip if such a terminal already is opened), then run "python manage.py createsuperuser" and follow the instructions. The administrator page is accessible at http://127.0.0.1:1337/admin/.
 
 4. In order to fill out the database with initial data, open another terminal and run "docker-compose exec web /bin/bash" (skip if such a terminal already is opened), then run python manage.py loaddata fixtures.json
 
