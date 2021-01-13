@@ -10,7 +10,7 @@ API service for the Yamdb website, which is intended for publishing reviews abou
 
 ### Prerequisites
 
-Nothing, as the project uses the Docker system.
+Docker and docker-compose.
 
 ### Installing
 
@@ -32,7 +32,7 @@ None
 
 ### And coding style tests
 
-None
+Included into the Git Actions process.
 
 ## Deployment
 
