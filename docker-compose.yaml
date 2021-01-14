@@ -3,6 +3,7 @@ version: '3.8'
 volumes:
   postgres_data:
   static:
+  media:
 
 services:
   db:
@@ -16,9 +17,8 @@ services:
     image: tunturuntun/yamdb:latest
     volumes:
       - static:/code/var/html/static
+      - media:/code/var/html/media
     restart: always
-    expose:
-      - 8000 
     depends_on:
       - db
     env_file:
@@ -28,7 +28,10 @@ services:
     image: nginx:1.19.0-alpine
     volumes:
       - static:/code/var/html/static
+      - media:/code/var/html/media
       - ./nginx.conf:/etc/nginx/nginx.conf
+    expose:
+      - 8000 
     ports:
       - 8080:80
     depends_on:
